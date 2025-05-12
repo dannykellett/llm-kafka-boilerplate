@@ -20,23 +20,87 @@ A flexible boilerplate for building applications that integrate Kafka messaging 
 - Access to a Kafka cluster
 - API key for an LLM service (OpenAI, OpenRouter, etc.)
 
-### Installation
+## Creating New Projects from the Boilerplate
+
+There are multiple ways to create a new project using this boilerplate:
+
+### 1. Using GitHub Template
+
+If the repository is set up as a template on GitHub:
+
+1. Navigate to the GitHub repository page
+2. Click the "Use this template" button
+3. Select "Create a new repository"
+4. Fill in your repository details and click "Create repository from template"
+5. Clone your new repository:
+   ```bash
+   git clone https://github.com/yourusername/your-new-project.git
+   cd your-new-project
+   ```
+6. Update project information in `pyproject.toml`, `README.md`, and other files
+
+### 2. Using the Setup Script
+
+The boilerplate includes a setup script that automates the process of creating a new project:
+
+1. Clone the boilerplate repository:
+   ```bash
+   git clone https://github.com/yourusername/llm-kafka-boilerplate.git
+   ```
+
+2. Run the setup script:
+   ```bash
+   cd llm-kafka-boilerplate
+   python boilerplate/scripts/setup.py "Your Project Name" --output-dir /path/to/output --author "Your Name" --email "your.email@example.com"
+   ```
+
+   Arguments:
+   - `project_name` (required): Name of your new project
+   - `--output-dir` (optional): Output directory (default: current directory)
+   - `--author` (optional): Author name for the project
+   - `--email` (optional): Author email for the project
+
+3. Navigate to your new project directory and initialize git:
+   ```bash
+   cd /path/to/output/your-project-name
+   git init
+   git add .
+   git commit -m "Initial commit from boilerplate"
+   ```
+
+### 3. Manual Copy
+
+You can also manually copy the boilerplate:
 
 1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/llm-kafka-boilerplate.git
+   ```
 
-```bash
-git clone https://github.com/yourusername/llm-kafka-boilerplate.git
-cd llm-kafka-boilerplate
-```
+2. Create a new directory for your project:
+   ```bash
+   mkdir /path/to/your-new-project
+   ```
 
-2. Create a virtual environment:
+3. Copy the boilerplate files:
+   ```bash
+   cp -r llm-kafka-boilerplate/* /path/to/your-new-project/
+   ```
+
+4. Update project information in `pyproject.toml`, `README.md`, and other files
+
+### Installation
+
+After creating your project using one of the methods above:
+
+1. Create a virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+2. Install dependencies:
 
 ```bash
 make install  # For production dependencies
