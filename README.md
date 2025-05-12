@@ -135,14 +135,28 @@ CACHE_TTL_SECONDS=3600
 
 ### Running the Application
 
+First, ensure you've installed the package in development mode:
+
 ```bash
-# Run directly
+# Install in development mode
+make install-dev
+```
+
+Then you can run the application using one of these methods:
+
+```bash
+# Run using the Makefile (recommended)
 make run
+
+# Run as a Python module
+python -m src
 
 # Or using Docker
 make docker-build
 make docker-run
 ```
+
+> **Note:** Do not run the application directly with `python src/app.py` or `uv run src/app.py` as this will cause import errors. The application uses absolute imports and must be installed in development mode or run as a module.
 
 ## Extending the Boilerplate
 
@@ -241,6 +255,13 @@ For more detailed documentation, see the `docs/` directory:
 - [API](docs/api.md)
 - [Deployment](docs/deployment.md)
 - [Environment Variables](docs/environment_variables.md)
+
+## Development Guidelines
+
+This project follows a set of comprehensive coding standards and best practices. All contributors should adhere to these guidelines:
+
+- [Python Coding Rules](python_coding_rules.md)
+- [Contributing Guidelines](CONTRIBUTING.md)
 
 ## License
 

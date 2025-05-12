@@ -2,9 +2,12 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Copy requirements first for better caching
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Install uv
+RUN pip install --no-cache-dir uv
+
+# Copy pyproject.toml first for better caching
+COPY pyproject.toml .
+RUN uv pip install --no-cache-dir .
 
 # Copy the rest of the application
 COPY . .

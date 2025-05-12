@@ -17,11 +17,11 @@ help:
 
 # Install production dependencies
 install:
-	pip install -r requirements.txt
+	uv pip install .
 
-# Install development dependencies
+# Install development dependencies (installs package in development mode)
 install-dev:
-	pip install -r requirements-dev.txt
+	uv pip install -e ".[dev]"  # The -e flag installs the package in development mode
 	pre-commit install
 
 # Run linters
