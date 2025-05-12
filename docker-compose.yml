@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    # Uncomment and modify the following lines if you need to expose ports
+    # ports:
+    #   - "8080:8080"
