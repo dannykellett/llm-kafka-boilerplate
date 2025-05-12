@@ -34,7 +34,7 @@ If the repository is set up as a template on GitHub:
 4. Fill in your repository details and click "Create repository from template"
 5. Clone your new repository:
    ```bash
-   git clone https://github.com/yourusername/your-new-project.git
+   git clone https://github.com/dannykellett/your-new-project.git
    cd your-new-project
    ```
 6. Update project information in `pyproject.toml`, `README.md`, and other files
@@ -45,7 +45,7 @@ The boilerplate includes a setup script that automates the process of creating a
 
 1. Clone the boilerplate repository:
    ```bash
-   git clone https://github.com/yourusername/llm-kafka-boilerplate.git
+   git clone https://github.com/dannykellett/llm-kafka-boilerplate.git
    ```
 
 2. Run the setup script:
@@ -74,7 +74,7 @@ You can also manually copy the boilerplate:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/llm-kafka-boilerplate.git
+   git clone https://github.com/dannykellett/llm-kafka-boilerplate.git
    ```
 
 2. Create a new directory for your project:
